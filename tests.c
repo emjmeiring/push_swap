@@ -22,66 +22,62 @@ int		main()
 
 
 	//Swap two
-	j = s->log_len - 1;
+	j = s->log_len;
 	printf("Testing Swap\n");
-	while(j >= 0)
+	while(--j >= 0)
 	{
-		printf("%d\n", s->elems[j--]);
+		printf("%d\n", s->elems[j]);
 	}
 	printf("After Swapping:\n");
 	swap(s);
-	j = s->log_len - 1;
-	while(j >= 0)
+	j = s->log_len;
+	while(--j >= 0)
 	{
-		printf("%d\n", s->elems[j--]);
+		printf("%d\n", s->elems[j]);
 	}
 
 	//Shift Up
-	j = s->log_len - 1;
+	j = s->log_len;
 	printf("\n\nTesting Shift-Up:\n");
-	while(j >= 0)
+	while(--j >= 0)
 	{
-		printf("%d\n", s->elems[j--]);
+		printf("%d\n", s->elems[j]);
 	}
 	printf("After shifting up:\n");
 	shift_up(s);
-	j = s->log_len - 1;
-	while(j >= 0)
+	j = s->log_len;
+	while(--j >= 0)
 	{
-		printf("%d\n", s->elems[j--]);
+		printf("%d\n", s->elems[j]);
 	}
 	//end Shift Up
 	
 	//Shift Down
-	j = s->log_len - 1;
+	j = s->log_len;
 	printf("\n\nTesting Shift-Down:\n");
-	while(j >= 0)
+	while(--j >= 0)
 	{
-		printf("%d\n", s->elems[j--]);
+		printf("%d\n", s->elems[j]);
 	}
 	printf("After Shifting Down:\n");
 	shift_down(s);
-	j = s->log_len - 1;
-	while(j >= 0)
+	j = s->log_len;
+	while(--j >= 0)
 	{
-		printf("%d\n", s->elems[j--]);
+		printf("%d\n", s->elems[j]);
 	}
 	//end shift down
 	
 	//Push on
-	j = s->log_len - 1;
-	printf("\n\nTesting Push on:\n");
-	while(j >= 0)
-	{
-		printf("%d\n", s->elems[j--]);
-	}
-	printf("After Push on:\n");
+	j = s->log_len;
+	printf("\n\nTrying to push [%d] on stack b:\n", s->elems[s->log_len - 1]);
+	while(--j >= 0)
+		printf("%d\n", s->elems[j]);
+	printf("Pushed: [%d] onto the stack\n", s->elems[s->log_len - 1]);
 	stack_push_on(s1, s);
-	j = s->log_len - 1;
-	while(j >= 6)
-	{
-		printf("%d\n", s1->elems[j--]);
-	}
+	j = s->log_len;
+	while(--j >= 0)
+		printf("%d\t%d\n", s->log_len >= 0 ? s->elems[j] : 0, s1->elems[j]);
 	//end push on
 	return (0);
 	

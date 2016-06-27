@@ -22,10 +22,9 @@ void	stack_push_on(t_stack *a, t_stack *b)
 	{
 		a->alloc_len *= 2;
 		stack_grow(a);
-		a->log_len++;
 	}
-	a->elems[a->log_len] = b->elems[b->log_len];
-	a->log_len++;
+	stack_push(a, b->elems[b->log_len - 1]);
+	stack_pop(b);
 }
 
 void	shift_up(t_stack *s)
