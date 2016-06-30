@@ -1,5 +1,6 @@
 #ifndef PUSH_SWAP
 #define PUSH_SWAP
+#define STD_SIZ 6
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>

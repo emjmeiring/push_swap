@@ -1,16 +1,18 @@
-/*
-• If after executing those instructions, stack a is actually sorted and b is empty, then
-checker must display "OK" followed by a ’\n’ on the standard output. In every
-other case, checker must display "KO" followed by a ’\n’ on the standard output.
-• In case of error, you must display Error followed by a ’\n’ on the standard error.
-Errors include for example: some arguments are not integers, some arguments are
-bigger than an integer, there are duplicates, an instruction don’t exist and/or is
-incorrectly formatted.
-*/
 #include "checker.h"
 
-/*• wait and read instructions , each instruction will be followed by ’\n’.
-* checker execute instructions e stack received as an argument.*/
+/**
+ *If, after executing those instructions, stack a is actually sorted and b is
+ * empty, then checker must display "OK" followed by a ’\n’ on the standard
+ * output. In every other case, checker must display "KO" followed by a ’\n’ on
+ * the standard output. In case of error, you must display Error followed by a
+ * ’\n’ on the standard error. Errors include for example: some arguments are
+ * not integers, some arguments are bigger than an integer, there are
+ * duplicates, an instruction don’t exist and/or is incorrectly formatted.
+ *
+ * Wait and read instructions , each instruction will be followed by ’\n’.
+ * Checker must execute instructions a stack received as an argument.
+ **/
+
 int		read_instr(char **instr)
 {
 	int i;
@@ -22,10 +24,7 @@ int		read_instr(char **instr)
 	line = (char *)malloc(sizeof(char) * 6);
 	
 	while ((nbytes = get_next_line(0, &line)) && i < 20)// && *line != '1')
-	{
-		instr[i] = ft_strdup(line);
-		i++;
-	}
+		instr[i++] = ft_strdup(line);
 	if (i == 20)
 	{
 		write(1, "Too many instructions\n", 22);
