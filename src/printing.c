@@ -1,12 +1,14 @@
 #include "checker.h"
 
-int		init_stacks(int *a, int *b, int argc, char **argv)
+int		init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 {
 	int i;
 	int j;
 
 	i = 0;
 	j = 0;
+	*(a->elems + argc - 1) = 0;
+	*(b->elems + argc - 1) = 0;
 	while (argc > 1)
 	{
 		while (argv[argc - 1][j])
@@ -18,19 +20,19 @@ int		init_stacks(int *a, int *b, int argc, char **argv)
 			}
 			j++;
 		}
-		*(a + i) = ft_atoi(argv[argc - 1]);
-		*(b + i) = 0;
+		stack_push(a, ft_atoi(argv[argc - 1]));		
+		stack_push(b, 0);
 		i++;
 		argc--;
 	}
 	return (1);
 }
 
-void	print_stacks(int *a, int *b, int i, char **instr)
+void	print_stacks(t_stack *a, t_stack *b, int i, char **instr)
 {
 	while (i >= 0)
 	{
-		printf("%d\t%s  |\n", *(a + i), *(b + i) == 0 ? " " : ft_itoa(b[i]));
+		printf("%d\t%s  |\n", *(a->elems + i), *(b->elems + i) == 0 ? " " : ft_itoa(b->elems[i]));
 		i--;
 	}
 	printf("-\t-  |\na\tb  |\n");

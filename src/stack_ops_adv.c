@@ -18,11 +18,11 @@ void	stack_push_on(t_stack *a, t_stack *b)
 {
 	if (b->log_len <= 0)
 		return ;
-	if (a->alloc_len == a->log_len)
-	{
-		a->alloc_len *= 2;
-		stack_grow(a);
-	}
+	//if (a->alloc_len == a->log_len)
+	//{
+		//a->alloc_len *= 2;
+		//stack_grow(&a);
+	//}
 	stack_push(a, b->elems[b->log_len - 1]);
 	stack_pop(b);
 }
