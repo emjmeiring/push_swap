@@ -58,14 +58,14 @@ void	apply_instr(t_stack *a, t_stack *b, char **instr)
 			stack_push_on(b, a);
 		else if (ft_strcmp(instr[i], "ra") == 0)
 			shift_up(a);
-		else if (ft_strcmp(instr[i], "sb") == 0)
+		else if (ft_strcmp(instr[i], "rb") == 0)
 			shift_up(b);
 		else if (ft_strcmp(instr[i], "rr") == 0)
 		{	shift_up(a);	shift_up(b);	}
 		else if (ft_strcmp(instr[i], "rra") == 0)
 			shift_down(a);
 		else if (ft_strcmp(instr[i], "rrb") == 0)
-			shift_down(a);
+			shift_down(b);
 		else if (ft_strcmp(instr[i], "rrr") == 0)
 		{	shift_down(a);	shift_down(b);	}
 		i++;

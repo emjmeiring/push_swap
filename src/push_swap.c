@@ -19,11 +19,15 @@ a, the smallest number being at the top.
 */
 void	set_instr(char **instr)
 {
-	instr[0] = "ra";
-	instr[1] = "sa";
-	instr[2] = "pb";
-	instr[3] = "ra";
-	instr[4] = "\0\0\0";
+	int i = 0;
+	instr[i++] = "pb";
+	instr[i++] = "pb";
+	//instr[i++] = "pb";
+	instr[i++] = "rra";
+	instr[i++] = "rrb";
+	//instr[i++] = "ss";
+	//instr[i++] = "ss";
+	instr[i++] = "\0\0\0";
 }
 
 /*push_swap ,arguments of integers.*/
