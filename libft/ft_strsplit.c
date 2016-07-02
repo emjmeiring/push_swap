@@ -6,13 +6,13 @@
 /*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Updated: 2016/07/02 02:51:29 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(char *s, char c)
+size_t	ft_count_words(char *s, char c)
 {
 	size_t		nb_words;
 

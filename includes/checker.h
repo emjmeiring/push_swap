@@ -6,7 +6,7 @@
 /*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 08:58:44 by jomeirin          #+#    #+#             */
-/*   Updated: 2016/06/13 09:53:19 by jomeirin         ###   ########.fr       */
+/*   Updated: 2016/07/02 02:56:39 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include "../libft/libft.h"
 #include "push_swap.h"
 
-int		init_stacks(t_stack *a, t_stack *b, int argc, char **argv);
+int		init_stacks(t_stack *a, t_stack *b, int ac, char **ar);
 void	print_stacks(t_stack *a, t_stack *b, int i, char **instr);
 int		read_instr(char **instr);
 #endif

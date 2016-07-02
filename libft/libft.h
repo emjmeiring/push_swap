@@ -6,7 +6,7 @@
 /*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Updated: 2016/07/02 02:52:03 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,5 +136,5 @@ int					ft_strcf(char *str, char c);
 void				ft_lstclear(t_list **list);
 t_list				*ft_lstnclear(t_list **list, int nb);
 int					get_next_line(int fd, char **line);
-
+size_t				ft_count_words(char *s, char c);
 #endif

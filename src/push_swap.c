@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/07/01 23:47:25 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/07/02 04:33:47 by jomeirin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "checker.h"
 //#include "push_swap.h"
@@ -40,8 +52,6 @@ int		main(int argc, char **argv)
 
 	a = (t_stack *)malloc(sizeof(t_stack));
 	b = (t_stack *)malloc(sizeof(t_stack));
-	stack_new(a, argc);
-	stack_new(b, argc);
 	instr = (char **)malloc(sizeof(char *) * 20);
 	i = 0;
 	if (argc <= 1)

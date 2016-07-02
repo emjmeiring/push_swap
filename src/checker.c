@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/07/01 12:58:17 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/07/02 04:29:55 by jomeirin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 • If after executing those instructions, stack a is actually sorted and b is empty, then
 checker must display "OK" followed by a ’\n’ on the standard output. In every
@@ -10,7 +22,7 @@ incorrectly formatted.
 #include "checker.h"
 #include "push_swap.h"
 
-/*• wait and read instructions , each instruction will be followed by ’\n’.-done*/
+/* wait and read instructions , each instruction will be followed by ’\n’.-done*/
 int		read_instr(char **instr)
 {
 	int i;
@@ -83,14 +95,14 @@ int		main(int argc, char **argv)
 
 	a = (t_stack *)malloc(sizeof(t_stack));
 	b = (t_stack *)malloc(sizeof(t_stack));
-	stack_new(a, argc - 1);
-	stack_new(b, argc - 1);
 	instr = (char **)malloc(sizeof(char *) * 20);
-	i = argc - 2;
+	//char c = i + '0';
+	//write(1, &c, 3);
 	if (argc <= 1)
 		return (0);
-	else if (!init_stacks(a, b, argc, argv))
+	else if (!(i = init_stacks(a, b, argc, argv)))
 			return (0);		
+	//ft_putnbr(i);
 	if(read_instr(instr) != -3) /// need to change -3
 	{
 		//write(1, "woow", 4);
@@ -99,9 +111,9 @@ int		main(int argc, char **argv)
 	}
 	//printf("**%s**\n", ft_itoa(-50));
 	//printf("%lu:%lu  %lu:%lu" ,sizeof(t_stack),sizeof(a),sizeof(char*),sizeof(instr) );
-	//free(a->elems);
-	//free(b->elems);
-	//ft_memdel((void **)instr);
-	//free(instr);
+	free(a->elems);
+	free(b->elems);
+	ft_memdel((void **)instr);
+	free(instr);
 	return (0);
 }

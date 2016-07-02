@@ -6,7 +6,7 @@
 #    By: jomeirin- <marvin@42.fr>                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/25 11:32:01 by jomeirin-         #+#    #+#              #
-#    Updated: 2016/06/13 08:13:51 by jomeirin-        ###   ########.fr        #
+#    Updated: 2016/07/02 02:57:08 by jomeirin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,15 +36,15 @@ OBJ2 = push_swap.o printing.o stack_ops_adv.o stack_ops_basic.o
 
 $(CHEC):
 	@echo "Compiling binaries..."
-	@make re -C libft/	
+#	@make re -C libft/	
 	@$(CC) $(CFLAGS) $(PATH_HD) -c $(SRC1)
 	@$(CC) -o $(CHEC) $(OBJ1) -lm $(INC_LIBFT) 
-	@echo "Compilation was successful!"
+	@echo "*********Compilation was successful!**********"
 
 $(PUSH):
 	@$(CC) $(CFLAGS) $(PATH_HD) -c $(SRC2)
 	@$(CC) -o $(PUSH) $(OBJ2) -lm $(INC_LIBFT) 
-	@echo "Compilation was successful!"
+	@echo ">>>>>>>Compilation was successful!<<<<<<<<"
 
 
 all: $(CHEC) $(PUSH)
@@ -54,19 +54,19 @@ x11:
 	@make re -C libft/	
 	@$(CC) $(CFLAGS) $(PATH_HD) -c $(SRC)
 	@$(CC) -o $(NAME) $(OBJ) -lm $(INC_LIBFT) 
-	@echo "Compilation was successful!"
+	@echo "Compilation was successful!------^^&^&^"
 
 clean:
 	@echo "Cleaning object files..."
 	@$(RM) $(OBJ)
 	@echo "Cleaning libft object files..."
-	@make -C libft/ clean
+	#@make -C libft/ clean
 	@echo "Done cleaning!"
 fclean:
 	@echo "Cleaning object files..."
 	@$(RM) $(OBJ1) $(OBJ2)
 	@echo "Cleaning libft object & binary files..."
-	@make -C libft/ fclean
+	#@make -C libft/ fclean
 	@echo "Cleaning binaries..."
 	@$(RM) $(CHEC) $(PUSH)
 	@echo "Done cleaning!"
