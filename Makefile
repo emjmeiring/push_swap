@@ -29,10 +29,10 @@ PATH_SRC= ./src/
 PATH_HD= -I includes/
 
 SRC1 = $(PATH_SRC)checker.c $(PATH_SRC)printing.c $(PATH_SRC)stack_ops_adv.c $(PATH_SRC)stack_ops_basic.c
-SRC2 = $(PATH_SRC)push_swap.c $(PATH_SRC)printing.c $(PATH_SRC)stack_ops_adv.c $(PATH_SRC)stack_ops_basic.c
+SRC2 = $(PATH_SRC)push_swap.c $(PATH_SRC)printing.c $(PATH_SRC)stack_ops_adv.c $(PATH_SRC)stack_ops_basic.c $(PATH_SRC)sorter.c
 
 OBJ1 = checker.o printing.o stack_ops_adv.o stack_ops_basic.o
-OBJ2 = push_swap.o printing.o stack_ops_adv.o stack_ops_basic.o
+OBJ2 = push_swap.o printing.o stack_ops_adv.o stack_ops_basic.o sorter.o
 
 $(CHEC):
 	@echo "Compiling binaries..."

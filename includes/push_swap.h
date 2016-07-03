@@ -22,5 +22,6 @@ void			stack_grow(t_stack **s);
 void			stack_push_on(t_stack *a, t_stack *b);
 void			shift_up(t_stack *s);
 void			shift_down(t_stack *s);
+void			myne_sorter(t_stack *a, t_stack *b, char **instr);
 
 #endif

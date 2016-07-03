@@ -107,7 +107,7 @@ int		main(int argc, char **argv)
 	{
 		//write(1, "woow", 4);
 		apply_instr(a, b, instr);
-		print_stacks(a, b, i, instr);
+		print_stacks(a, b, i - 1, instr);
 	}
 	//printf("**%s**\n", ft_itoa(-50));
 	//printf("%lu:%lu  %lu:%lu" ,sizeof(t_stack),sizeof(a),sizeof(char*),sizeof(instr) );

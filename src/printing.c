@@ -71,6 +71,8 @@ void	print_stacks(t_stack *a, t_stack *b, int i, char **instr)
 	}
 	printf("-\t-  |\na\tb  |\n");
 	i=0;
+	write(1, "\nhahaha", 1);
+	
 	while (instr[i])
 	{
 		printf("%s\n", instr[i]);

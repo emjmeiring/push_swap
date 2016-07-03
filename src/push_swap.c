@@ -34,11 +34,13 @@ void	set_instr(char **instr)
 	int i = 0;
 	instr[i++] = "pb";
 	instr[i++] = "pb";
-	//instr[i++] = "pb";
-	instr[i++] = "rra";
-	instr[i++] = "rrb";
-	//instr[i++] = "ss";
-	//instr[i++] = "ss";
+	instr[i++] = "pb";
+	instr[i++] = "ra";
+	instr[i++] = "rb";
+	instr[i++] = "rr";
+	instr[i++] = "ss";
+	instr[i++] = "rrr";
+	instr[i++] = "pa";
 	instr[i++] = "\0\0\0";
 }
 
@@ -52,12 +54,15 @@ int		main(int argc, char **argv)
 
 	a = (t_stack *)malloc(sizeof(t_stack));
 	b = (t_stack *)malloc(sizeof(t_stack));
-	instr = (char **)malloc(sizeof(char *) * 20);
+	instr = (char **)malloc(sizeof(char *) * 20000);
 	i = 0;
 	if (argc <= 1)
 		return (0);
 	else if (!init_stacks(a, b, argc, argv))
 			return (0);
+	//print_stacks(a, b, a->alloc_len - 1, instr); 
+	//myne_sorter(a, b, instr);
+	//print_stacks(a, b, a->alloc_len - 1, instr);
 	set_instr(instr);
 	while (instr[i][0] != '\0')
 	{
