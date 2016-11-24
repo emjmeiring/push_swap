@@ -6,7 +6,7 @@
 #    By: jomeirin- <marvin@42.fr>                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/25 11:32:01 by jomeirin-         #+#    #+#              #
-#    Updated: 2016/07/02 02:57:08 by jomeirin         ###   ########.fr        #
+#    Updated: 2016/07/02 04:48:39 by jomeirin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ PUSH=push_swap
 
 CC=gcc
 
-CFLAGS=-Wall -Wextra -Werror -g
+CFLAGS=-Wall -Wextra #-Werror -g
 
 RM=rm -f
 
@@ -29,14 +29,14 @@ PATH_SRC= ./src/
 PATH_HD= -I includes/
 
 SRC1 = $(PATH_SRC)checker.c $(PATH_SRC)printing.c $(PATH_SRC)stack_ops_adv.c $(PATH_SRC)stack_ops_basic.c
-SRC2 = $(PATH_SRC)push_swap.c $(PATH_SRC)printing.c $(PATH_SRC)stack_ops_adv.c $(PATH_SRC)stack_ops_basic.c $(PATH_SRC)sorter.c
+SRC2 = $(PATH_SRC)push_swap.c $(PATH_SRC)printing.c $(PATH_SRC)stack_ops_adv.c $(PATH_SRC)stack_ops_basic.c
 
 OBJ1 = checker.o printing.o stack_ops_adv.o stack_ops_basic.o
-OBJ2 = push_swap.o printing.o stack_ops_adv.o stack_ops_basic.o sorter.o
+OBJ2 = push_swap.o printing.o stack_ops_adv.o stack_ops_basic.o
 
 $(CHEC):
 	@echo "Compiling binaries..."
-#	@make re -C libft/	
+	#@make re -C libft/	
 	@$(CC) $(CFLAGS) $(PATH_HD) -c $(SRC1)
 	@$(CC) -o $(CHEC) $(OBJ1) -lm $(INC_LIBFT) 
 	@echo "*********Compilation was successful!**********"
@@ -51,7 +51,7 @@ all: $(CHEC) $(PUSH)
 
 x11:
 	@echo "Compiling binaries..."
-	@make re -C libft/	
+	#@make re -C libft/	
 	@$(CC) $(CFLAGS) $(PATH_HD) -c $(SRC)
 	@$(CC) -o $(NAME) $(OBJ) -lm $(INC_LIBFT) 
 	@echo "Compilation was successful!------^^&^&^"

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                       :+:      :+:    :+:    */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 13:00:29 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 15:40:56 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr(char const *str)
+void	ft_putstr(char const *str)
 {
 	while (*str)
 		write(1, str++, 1);

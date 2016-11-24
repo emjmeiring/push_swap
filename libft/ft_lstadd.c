@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 10:58:17 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 23:09:37 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 12:33:17 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 15:43:16 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Adds the element "new" to the beginnning of the list. */
-
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (!(*alst) || new || alst)
-			new->next = *alst;
-		*alst = new;
+		new->next = *alst;
+	*alst = new;
 }

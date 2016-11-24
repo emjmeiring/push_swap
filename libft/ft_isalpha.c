@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/15 14:55:05 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/15 14:55:13 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 12:22:51 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 12:22:54 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(char c)
+int		ft_isalpha(int c)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return(1);
+	else return (0);
 }

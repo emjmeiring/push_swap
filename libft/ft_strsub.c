@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                       :+:      :+:    :+:    */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 15:23:15 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 15:23:22 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = -1;
-	news = malloc(sizeof(char) * len);
+	news = malloc(sizeof(char) * len + 1);
 	if (!news || !len || !s)
 		return (NULL);
 	while (++i < len)
 		*(news + i) = *(s + start + i);
+	*(news + i) = '\0';
 	return (news);
 }

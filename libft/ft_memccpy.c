@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                      :+:      :+:    :+:    */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 12:41:43 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 12:41:46 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,14 @@
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t	i;
-
+	char 	seg_test;
+	
+	i = 0;
+	while (*((char *)src + i) != '\0')
+		i += 1;
+	seg_test = *((char *)dst + n - 1);
+	seg_test = *((char *)dst + i);
+	seg_test = *((char *)src + n - 1);
 	i = 0;
 	if (dst && src && c && n)
 	{

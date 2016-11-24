@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                       :+:      :+:    :+:    */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 15:04:02 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/31 11:42:34 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ char	*ft_strdup(const char *s1)
 	len = -1;
 	while (s1[++len])
 		;
-	c = (char *)malloc(len * sizeof(char) + 1);
-	if (c != NULL)
-		ft_strcpy(c, s1);
-	*(c + len) = '\0';
+	if ((c = (char *)malloc(len * sizeof(char) + 1)))
+	{
+		if (c != NULL)
+			ft_strcpy(c, s1);
+		*(c + len) = '\0';
+	}
 	return (c);
 }

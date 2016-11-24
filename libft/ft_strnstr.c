@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                      :+:      :+:    :+:    */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/12 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/17 21:47:01 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 15:15:39 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 15:15:41 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	len;
+	char	seg_test;
 
+	seg_test = *s1;
+	seg_test = *s2;
 	len = ft_strlen(s2);
 	if (!*s2)
 		return ((char *)s1);

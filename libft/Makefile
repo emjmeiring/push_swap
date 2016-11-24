@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: simzam <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/05/14 14:18:36 by simzam            #+#    #+#              #
-#    Updated: 2016/06/02 14:31:51 by simzam           ###   ########.fr        #
+#    Created: 2016/10/28 12:16:53 by jomeirin          #+#    #+#              #
+#    Updated: 2016/10/31 11:35:18 by jomeirin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
@@ -27,7 +28,7 @@ SOURCE = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		 ft_max.c ft_islower.c ft_isupper.c ft_sqrt.c ft_power.c \
 		 ft_btw.c ft_isblank.c ft_lstpushback.c ft_lstlen.c ft_strcf.c \
 		 ft_lstclear.c ft_lstnclear.c get_next_line.c ft_strconc.c \
-		 ft_clamp.c ft_mix.c ft_smoothstep.c ft_vec.c ft_vec2.c ft_vec3.c\
+		 ft_clamp.c ft_mix.c ft_vec.c ft_vec2.c ft_vec3.c\
 
 OBJ = $(SOURCE:.c=.o)
 

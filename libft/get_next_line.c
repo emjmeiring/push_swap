@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                   :+:      :+:    :+:    */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/22 10:01:12 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/22 21:47:01 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 15:30:47 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/11/07 10:30:00 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*cpycat(char *s1, char *s2)
 	return (tmp);
 }
 
-int					get_next_line(int const fd, char **line)
+int		get_next_line(int const fd, char **line)
 {
 	static char				*str;
 	int						res;

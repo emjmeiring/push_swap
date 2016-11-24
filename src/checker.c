@@ -59,28 +59,29 @@ void	apply_instr(t_stack *a, t_stack *b, char **instr)
 	while (instr[i])
 	{
 		if (ft_strcmp(instr[i], "sa") == 0)
-			swap(a);
+		{swap(a); write(1, "sa\n", 3);}
 		else if (ft_strcmp(instr[i], "sb") == 0)
-			swap(b);
+		{	swap(b);write(1, "sb\n", 3);}
 		else if (ft_strcmp(instr[i], "ss") == 0)
-		{	swap(a);	swap(b);	}
+		{	swap(a);	swap(b);write(1, "ss\n", 3);	}
 		else if (ft_strcmp(instr[i], "pa") == 0)
-			stack_push_on(a, b);
+		{	stack_push_on(a, b);write(1, "pa\n", 3);}
 		else if (ft_strcmp(instr[i], "pb") == 0)
-			stack_push_on(b, a);
+		{stack_push_on(b, a);write(1, "pb\n", 3);}
 		else if (ft_strcmp(instr[i], "ra") == 0)
-			shift_up(a);
+		{shift_up(a);write(1, "ra\n", 3);}
 		else if (ft_strcmp(instr[i], "rb") == 0)
-			shift_up(b);
+		{	shift_up(b);write(1, "rb\n", 3);}
 		else if (ft_strcmp(instr[i], "rr") == 0)
-		{	shift_up(a);	shift_up(b);	}
+		{	shift_up(a);	shift_up(b);write(1, "rr\n", 3);}
 		else if (ft_strcmp(instr[i], "rra") == 0)
-			shift_down(a);
+		{shift_down(a);write(1, "rra\n", 4);}
 		else if (ft_strcmp(instr[i], "rrb") == 0)
-			shift_down(b);
+		{	shift_down(b);write(1, "rrb\n", 4);}
 		else if (ft_strcmp(instr[i], "rrr") == 0)
-		{	shift_down(a);	shift_down(b);	}
+		{	shift_down(a);	shift_down(b);	write(1, "rrr\n", 4);}
 		i++;
+		print_stacks(a, b, 6, instr);
 	}
 }
 /*
@@ -106,8 +107,9 @@ int		main(int argc, char **argv)
 	if(read_instr(instr) != -3) /// need to change -3
 	{
 		//write(1, "woow", 4);
+		//print_stacks(a, b, i, instr);
 		apply_instr(a, b, instr);
-		print_stacks(a, b, i - 1, instr);
+		//print_stacks(a, b, i, instr);
 	}
 	//printf("**%s**\n", ft_itoa(-50));
 	//printf("%lu:%lu  %lu:%lu" ,sizeof(t_stack),sizeof(a),sizeof(char*),sizeof(instr) );

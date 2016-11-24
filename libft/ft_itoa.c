@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simzam <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jomeirin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/15 14:53:44 by simzam            #+#    #+#             */
-/*   Updated: 2016/05/15 14:54:12 by simzam           ###   ########.fr       */
+/*   Created: 2016/10/28 12:31:52 by jomeirin          #+#    #+#             */
+/*   Updated: 2016/10/28 12:32:05 by jomeirin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char			*ft_itoa(int n)
 	char		*str;
 
 	lengths(n, &len, &weight);
-	str = (char *)malloc(sizeof(*str) * (len + 1));
+	str = (char *)malloc(sizeof(*str) * (len + 2));
 	if (str == NULL)
 		return (NULL);
 	cur = 0;
